@@ -5,7 +5,7 @@
 @viewport { width: device-width; scale: 1; }
 
 html {
-	box-sizing: border-box;
+  box-sizing: border-box;
 
   -moz-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -16,7 +16,7 @@ html {
 }
 
 *, *::before, *::after {
-	box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -26,6 +26,7 @@ body {
 
 .text {
   padding: 1rem;
+  text-align: left;
 }
 
 h1 {
@@ -34,7 +35,7 @@ h1 {
 
 h2 {
   margin: 0;
-  font-size: .95em;
+  font-size: 1em;
 }
 
 p {
@@ -47,16 +48,41 @@ a {
   padding: .5em .75em .5em .75em;
   border-radius: 4px;
   text-decoration: none;
+  text-align: center;
 }
 
 .img-flex {
-  margin: 2em 0 0 0;
+  margin: 1em 0 0 0;
   vertical-align: middle;
+  display: block;
+  width: 100%;
 }
 
 img {
   max-width: 100%;
 }
+
 section {
   background-color: #e2e2e2;
+}
+
+@media only screen and (min-width: 38em) {
+
+  html {
+    font-size: 110%;
+    line-height: 1.4;
+  }
+
+  .text {
+    display: inline-block;
+    width: 49%;
+    padding: 2rem;
+  }
+
+  .img-flex {
+    display: inline-block;
+    width: 49%;
+    margin: auto;
+  }
+
 }
